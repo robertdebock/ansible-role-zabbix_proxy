@@ -1,0 +1,24 @@
+---
+# tasks file for zabbix_proxy
+- name: install zabbix-proxy
+  package:
+    name: zabbix-proxy
+    state: "{{ zabbix_proxy_package_state }}"
+  register: zabbix_proxy_install_zabbix_proxy
+  until: zabbix_proxy_install_zabbix_proxy is succeeded
+  retries: 3
+
+- name: configure zabbix_proxy
+  template:
+    src: zabbix-proxy.conf.j2
+    dest: /etc/zabbix-proxy.conf.j2
+  notify:
+    - restart zabbix-proxy
+
+- name: start and enable zabbix-proxy
+  service:
+    name: zabbix-proxy
+    state: started
+    enabled: yes
+  when:
+    - ansible_virtualization_type != "docker" or zabbix_proxy_ignore_docker

@@ -1,0 +1,8 @@
+---
+# handlers file for zabbix_proxy
+- name: restart zabbix-proxy
+  service:
+    name: zabbix-proxy
+    state: restarted
+  when:
+    - ansible_virtualization_type != "docker" or zabbix_proxy_ignore_docker
