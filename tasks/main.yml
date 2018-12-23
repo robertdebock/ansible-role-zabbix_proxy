@@ -1,8 +1,24 @@
 ---
 # tasks file for zabbix_proxy
+- name: test veriables and environment
+  assert:
+    that:
+      - zabbix_proxy_mode == 0 or
+        zabbix_proxy_mode == 1
+      - zabbix_proxy_server is defined
+      - zabbix_proxy_server_port >= 0
+      - zabbix_proxy_server_port <= 65536
+      - zabbix_proxy_hostname is defined
+      - zabbix_proxy_database_hostname is defined
+      - zabbix_proxy_database_name is defined
+      - zabbix_proxy_database_user is defined
+      - zabbix_proxy_database_password is defined
+      - zabbix_proxy_database_port >= 0
+      - zabbix_proxy_database_port <= 65536
+
 - name: install zabbix-proxy
   package:
-    name: zabbix-proxy
+    name: "{{ zabbix_proxy_package }}"
     state: "{{ zabbix_proxy_package_state }}"
   register: zabbix_proxy_install_zabbix_proxy
   until: zabbix_proxy_install_zabbix_proxy is succeeded
