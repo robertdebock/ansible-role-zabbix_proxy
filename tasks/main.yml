@@ -10,8 +10,8 @@
 
 - name: configure zabbix_proxy
   template:
-    src: zabbix-proxy.conf.j2
-    dest: /etc/zabbix-proxy.conf.j2
+    src: zabbix_proxy.conf.j2
+    dest: /etc/zabbix/zabbix_proxy.conf
   notify:
     - restart zabbix-proxy
 
