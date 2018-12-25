@@ -21,7 +21,8 @@ galaxy_info:
         - bionic
 
   galaxy_tags:
-    - zabbix_proxy
+    - zabbix
+    - proxy
     - centos
     - debian
     - el
