@@ -31,6 +31,21 @@ These variables are set in `defaults/main.yml`:
 ---
 # defaults file for zabbix_proxy
 
+# The mode to operate in, 0 is active, 1 is passive.
+zabbix_proxy_mode: 0
+
+zabbix_proxy_server: 127.0.0.1
+
+zabbix_proxy_server_port: 10051
+
+zabbix_proxy_hostname: "{{ ansible_fqdn }}"
+
+zabbix_proxy_database_hostname: localhost
+zabbix_proxy_database_name: zabbix_proxy
+zabbix_proxy_database_user: zabbix
+zabbix_proxy_database_password: zabbix
+zabbix_proxy_database_port: 3306
+
 # To update packages this role places on the system, set `zabbix_proxy_package_state` to `latest`.
 zabbix_proxy_package_state: present
 
