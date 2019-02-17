@@ -34,8 +34,10 @@ platforms:
     image: opensuse:leap
   - name: zabbix_proxy-opensuse-tumbleweed
     image: opensuse:tumbleweed
-  - name: zabbix_proxy-ubuntu-artful
-    image: ubuntu:artful
+  - name: zabbix_proxy-ubuntu-latest
+    image: ubuntu:latest
+  - name: zabbix_proxy-ubuntu-rolling
+    image: ubuntu:rolling
   - name: zabbix_proxy-ubuntu-devel
     image: ubuntu:devel
 provisioner:
