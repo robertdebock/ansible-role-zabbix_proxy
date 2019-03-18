@@ -15,11 +15,3 @@ zabbix_proxy_database_name: zabbix_proxy
 zabbix_proxy_database_user: zabbix
 zabbix_proxy_database_password: zabbix
 zabbix_proxy_database_port: 3306
-
-# To update packages this role places on the system, set `zabbix_proxy_package_state` to `latest`.
-zabbix_proxy_package_state: present
-
-# Some Docker containers do not allow managing services, rebooting and writing
-# to some locations in /etc. The role skips tasks that will typically fail in
-# Docker. With this parameter you can tell the role to -not- skip these tasks.
-zabbix_proxy_ignore_docker: yes

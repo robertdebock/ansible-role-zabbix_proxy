@@ -3,54 +3,64 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
   - name: zabbix_proxy-alpine-edge
     image: alpine:edge
+    pre_build_image: yes
     command: sh -c "while true ; do sleep 1 ; done"
   - name: zabbix_proxy-alpine-latest
     image: alpine:latest
+    pre_build_image: yes
     command: sh -c "while true ; do sleep 1 ; done"
   - name: zabbix_proxy-archlinux
     image: archlinux/base
+    pre_build_image: yes
   - name: zabbix_proxy-centos-6
     image: centos:6
+    pre_build_image: yes
   - name: zabbix_proxy-centos-latest
     image: centos:latest
+    pre_build_image: yes
   - name: zabbix_proxy-debian-latest
     image: debian:latest
+    pre_build_image: yes
   - name: zabbix_proxy-debian-stable
     image: debian:stable
+    pre_build_image: yes
   - name: zabbix_proxy-debian-unstable
     image: debian:unstable
+    pre_build_image: yes
   - name: zabbix_proxy-fedora-latest
     image: fedora:latest
+    pre_build_image: yes
   - name: zabbix_proxy-fedora-rawhide
     image: fedora:rawhide
+    pre_build_image: yes
   - name: zabbix_proxy-opensuse-leap
     image: opensuse:leap
+    pre_build_image: yes
   - name: zabbix_proxy-ubuntu-latest
     image: ubuntu:latest
+    pre_build_image: yes
   - name: zabbix_proxy-ubuntu-rolling
     image: ubuntu:rolling
+    pre_build_image: yes
   - name: zabbix_proxy-ubuntu-devel
     image: ubuntu:devel
+    pre_build_image: yes
+  - name: zabbix_proxy-ubuntu-latest
+    image: ubuntu:latest
+    pre_build_image: yes
 provisioner:
   name: ansible
-  inventory:
-    group_vars:
-      all:
-        zabbix_proxy_ignore_docker: no
-    host_vars:
-      zabbix_proxy-fedora-rawhide:
-        ansible_python_interpreter: /usr/bin/python3
+  playbooks:
+    prepare: ../resources/prepare.yml
+    converge: ../resources/playbook.yml
   lint:
     name: ansible-lint
-  config_options:
-    defaults:
-      callback_plugins: /usr/lib/python2.7/site-packages/ara/plugins/callbacks
 scenario:
   name: default

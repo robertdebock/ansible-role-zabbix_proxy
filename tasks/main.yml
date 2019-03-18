@@ -19,7 +19,7 @@
 - name: install zabbix-proxy
   package:
     name: "{{ zabbix_proxy_package }}"
-    state: "{{ zabbix_proxy_package_state }}"
+    state: present
   register: zabbix_proxy_install_zabbix_proxy
   until: zabbix_proxy_install_zabbix_proxy is succeeded
   retries: 3
@@ -37,4 +37,4 @@
     state: started
     enabled: yes
   when:
-    - ansible_virtualization_type != "docker" or zabbix_proxy_ignore_docker
+    - ansible_virtualization_type != "docker"
