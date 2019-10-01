@@ -4,4 +4,4 @@ _zabbix_proxy_package:
   Debian: zabbix-proxy-mysql
   RedHat: zabbix-proxy
 
-zabbix_proxy_package: "{{ _zabbix_proxy_package[ansible_os_distribution] }}"
+zabbix_proxy_package: "{{ _zabbix_proxy_package[ansible_os_family] }}"
