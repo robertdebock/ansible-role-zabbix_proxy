@@ -24,7 +24,6 @@ galaxy_info:
     - zabbix
     - proxy
     - centos
-    - el
     - rhel
     - ubuntu
 
