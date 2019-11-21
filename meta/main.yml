@@ -25,6 +25,5 @@ galaxy_info:
     - proxy
     - centos
     - rhel
-    - ubuntu
 
 dependencies: []
