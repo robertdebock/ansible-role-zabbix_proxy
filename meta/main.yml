@@ -24,6 +24,5 @@ galaxy_info:
     - zabbix
     - proxy
     - centos
-    - rhel
 
 dependencies: []
