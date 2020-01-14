@@ -1,7 +1,3 @@
 ---
 # vars file for zabbix_proxy
-_zabbix_proxy_package:
-  Debian: zabbix-proxy-mysql
-  RedHat: zabbix-proxy-mysql
-
-zabbix_proxy_package: "{{ _zabbix_proxy_package[ansible_os_family] }}"
+zabbix_proxy_package: zabbix-proxy-mysql
