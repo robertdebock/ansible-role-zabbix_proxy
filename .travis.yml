@@ -14,10 +14,12 @@ env:
   global:
     namespace="robertdebock"
   matrix:
-    - image="debian" tag="latest"
     - image="centos" tag="7"
+    - image="centos" tag="latest"
+    - image="debian" tag="latest"
     - image="opensuse" tag="latest"
-    - image="ubuntu" tag="1804"
+    - image="ubuntu" tag="bionic"
+    - image="ubuntu" tag="xenial"
 
 cache:
   - pip

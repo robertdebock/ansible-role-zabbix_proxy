@@ -32,14 +32,18 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "debian"
-            tag: "latest"
           - image: "centos"
             tag: "7"
+          - image: "centos"
+            tag: "latest"
+          - image: "debian"
+            tag: "latest"
           - image: "opensuse"
             tag: "latest"
           - image: "ubuntu"
-            tag: "1804"
+            tag: "bionic"
+          - image: "ubuntu"
+            tag: "xenial"
     steps:
       - name: checkout
         uses: actions/checkout@v2
