@@ -1,5 +1,8 @@
 ---
 # tasks file for zabbix_proxy
+- name: include assert.yml
+  include_tasks: assert.yml
+
 - name: install zabbix-proxy
   package:
     name: "{{ zabbix_proxy_package }}"
