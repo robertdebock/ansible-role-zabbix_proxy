@@ -3,7 +3,6 @@
   assert:
     that:
       - zabbix_proxy_mode is defined
-      - zabbix_proxy_mode | int
       - zabbix_proxy_mode in [0, 1]
 
 - name: test if zabbix_proxy_server is set correctly
