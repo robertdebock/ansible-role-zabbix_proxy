@@ -56,7 +56,7 @@ These variables are set in `defaults/main.yml`:
 # defaults file for zabbix_proxy
 
 # The mode to operate in, 0 is active, 1 is passive.
-zabbix_proxy_mode: 0
+zabbix_proxy_mode: "0"
 
 zabbix_proxy_server: 127.0.0.1
 
