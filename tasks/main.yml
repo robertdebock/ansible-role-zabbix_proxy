@@ -7,9 +7,6 @@
   package:
     name: "{{ zabbix_proxy_package }}"
     state: present
-  register: zabbix_proxy_install_zabbix_proxy
-  until: zabbix_proxy_install_zabbix_proxy is succeeded
-  retries: 3
 
 - name: configure zabbix_proxy
   template:
