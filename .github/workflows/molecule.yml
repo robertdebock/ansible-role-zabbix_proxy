@@ -39,8 +39,6 @@ jobs:
             tag: "latest"
           - image: "debian"
             tag: "latest"
-          - image: "opensuse"
-            tag: "latest"
           - image: "ubuntu"
             tag: "bionic"
           - image: "ubuntu"

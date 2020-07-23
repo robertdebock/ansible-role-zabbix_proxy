@@ -14,9 +14,6 @@ galaxy_info:
     - name: Debian
       versions:
         - buster
-    - name: OpenSUSE
-      versions:
-        - all
     - name: Ubuntu
       versions:
         - bionic
