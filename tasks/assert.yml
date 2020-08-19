@@ -5,12 +5,14 @@
       - zabbix_proxy_mode is defined
       - zabbix_proxy_mode | length > 0
       - zabbix_proxy_mode in ["0", "1"]
+    quiet: yes
 
 - name: test if zabbix_proxy_server is set correctly
   assert:
     that:
       - zabbix_proxy_server is defined
       - zabbix_proxy_server | length > 0
+    quiet: yes
 
 - name: test if zabbix_proxy_server_port is set correctly
   assert:
@@ -19,36 +21,42 @@
       - zabbix_proxy_server_port | int
       - zabbix_proxy_server_port | int > 0
       - zabbix_proxy_server_port | int < 65536
+    quiet: yes
 
 - name: test if zabbix_proxy_hostname is set correctly
   assert:
     that:
       - zabbix_proxy_hostname is defined
       - zabbix_proxy_hostname | length > 0
+    quiet: yes
 
 - name: test if zabbix_proxy_database_hostname is set correctly
   assert:
     that:
       - zabbix_proxy_database_hostname is defined
       - zabbix_proxy_database_hostname | length > 0
+    quiet: yes
 
 - name: test if zabbix_proxy_database_name is set correctly
   assert:
     that:
       - zabbix_proxy_database_name is defined
       - zabbix_proxy_database_name | length > 0
+    quiet: yes
 
 - name: test if zabbix_proxy_database_user is set correctly
   assert:
     that:
       - zabbix_proxy_database_user is defined
       - zabbix_proxy_database_user | length > 0
+    quiet: yes
 
 - name: test if zabbix_proxy_database_password is set correctly
   assert:
     that:
       - zabbix_proxy_database_password is defined
       - zabbix_proxy_database_password | length > 0
+    quiet: yes
 
 - name: test if zabbix_proxy_database_port is set correctly
   assert:
@@ -57,3 +65,4 @@
       - zabbix_proxy_database_port | int
       - zabbix_proxy_database_port | int > 0
       - zabbix_proxy_database_port | int < 65536
+    quiet: yes
