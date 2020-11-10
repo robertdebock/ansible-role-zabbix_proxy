@@ -4,7 +4,7 @@
     that:
       - zabbix_proxy_mode is defined
       - zabbix_proxy_mode | length > 0
-      - zabbix_proxy_mode in ["0", "1"]
+      - zabbix_proxy_mode in [ "0", "1" ]
     quiet: yes
 
 - name: test if zabbix_proxy_server is set correctly
