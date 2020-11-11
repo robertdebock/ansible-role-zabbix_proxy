@@ -18,7 +18,7 @@
   assert:
     that:
       - zabbix_proxy_server_port is defined
-      - zabbix_proxy_server_port | int
+      - zabbix_proxy_server_port is number
       - zabbix_proxy_server_port | int > 0
       - zabbix_proxy_server_port | int < 65536
     quiet: yes
@@ -62,7 +62,7 @@
   assert:
     that:
       - zabbix_proxy_database_port is defined
-      - zabbix_proxy_database_port | int
+      - zabbix_proxy_database_port is number
       - zabbix_proxy_database_port | int > 0
       - zabbix_proxy_database_port | int < 65536
     quiet: yes
