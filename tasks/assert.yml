@@ -17,8 +17,8 @@
     that:
       - zabbix_proxy_server_port is defined
       - zabbix_proxy_server_port is number
-      - zabbix_proxy_server_port | int > 0
-      - zabbix_proxy_server_port | int < 65536
+      - zabbix_proxy_server_port > 0
+      - zabbix_proxy_server_port < 65536
     quiet: yes
 
 - name: test if zabbix_proxy_hostname is set correctly
@@ -56,6 +56,6 @@
     that:
       - zabbix_proxy_database_port is defined
       - zabbix_proxy_database_port is number
-      - zabbix_proxy_database_port | int > 0
-      - zabbix_proxy_database_port | int < 65536
+      - zabbix_proxy_database_port > 0
+      - zabbix_proxy_database_port < 65536
     quiet: yes
