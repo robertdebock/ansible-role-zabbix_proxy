@@ -1,4 +1,5 @@
 ---
+
 - name: test if zabbix_proxy_mode is set correctly
   assert:
     that:
