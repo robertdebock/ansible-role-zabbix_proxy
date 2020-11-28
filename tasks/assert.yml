@@ -4,7 +4,7 @@
   assert:
     that:
       - zabbix_proxy_mode is defined
-      - zabbix_proxy_mode is number
+      - zabbix_proxy_mode is string
       - zabbix_proxy_mode in [ "0", "1" ]
     quiet: yes
 
