@@ -2,7 +2,7 @@
 # handlers file for zabbix_proxy
 
 - name: restart zabbix-proxy
-  service:
+  ansible.builtin.service:
     name: zabbix-proxy
     state: restarted
   when:
