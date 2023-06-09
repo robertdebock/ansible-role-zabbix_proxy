@@ -13,6 +13,7 @@
     that:
       - zabbix_proxy_server is defined
       - zabbix_proxy_server is string
+      - zabbix_proxy_server is not none
     quiet: yes
 
 - name: assert | Test if zabbix_proxy_server_port is set correctly
@@ -29,6 +30,7 @@
     that:
       - zabbix_proxy_hostname is defined
       - zabbix_proxy_hostname is string
+      - zabbix_proxy_hostname is not none
     quiet: yes
 
 - name: assert | Test if zabbix_proxy_database_hostname is set correctly
@@ -36,6 +38,7 @@
     that:
       - zabbix_proxy_database_hostname is defined
       - zabbix_proxy_database_hostname is string
+      - zabbix_proxy_database_hostname is not none
     quiet: yes
 
 - name: assert | Test if zabbix_proxy_database_name is set correctly
@@ -43,6 +46,7 @@
     that:
       - zabbix_proxy_database_name is defined
       - zabbix_proxy_database_name is string
+      - zabbix_proxy_database_name is not none
     quiet: yes
 
 - name: assert | Test if zabbix_proxy_database_user is set correctly
@@ -50,6 +54,7 @@
     that:
       - zabbix_proxy_database_user is defined
       - zabbix_proxy_database_user is string
+      - zabbix_proxy_database_user is not none
     quiet: yes
 
 - name: assert | Test if zabbix_proxy_database_password is set correctly
@@ -57,6 +62,7 @@
     that:
       - zabbix_proxy_database_password is defined
       - zabbix_proxy_database_password is string
+      - zabbix_proxy_database_password is not none
     quiet: yes
 
 - name: assert | Test if zabbix_proxy_database_port is set correctly
