@@ -5,4 +5,4 @@
 repository:
   description: Install and configure zabbix-proxy on your system.
   homepage: https://robertdebock.nl/
-  topics: zabbix, proxy, ansible, molecule, tox, playbook
+  topics: zabbix, proxy, monitoring, networking, ansible, molecule, tox, playbook
