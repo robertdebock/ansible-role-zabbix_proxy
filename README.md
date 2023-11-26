@@ -1,4 +1,4 @@
-# Ansible role [zabbix_proxy](#zabbix_proxy)
+# [Ansible role zabbix_proxy](#zabbix_proxy)
 
 Install and configure zabbix-proxy on your system.
 
