@@ -1,0 +1,13 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    "zabbix_proxy" [fillcolor=yellow style=filled penwidth=3]
+    "robertdebock.bootstrap" [fillcolor=green style=filled]
+    "robertdebock.ca_certificates" [fillcolor=green style=filled]
+    "robertdebock.zabbix_repository" [fillcolor=green style=filled]
+  }
+  "zabbix_proxy" -> "robertdebock.bootstrap"
+  "zabbix_proxy" -> "robertdebock.ca_certificates"
+  "zabbix_proxy" -> "robertdebock.zabbix_repository"
+}
