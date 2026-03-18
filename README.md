@@ -53,7 +53,7 @@ zabbix_proxy_server: "127.0.0.1"
 
 zabbix_proxy_server_port: 10051
 
-zabbix_proxy_hostname: "{{ ansible_fqdn }}"
+zabbix_proxy_hostname: "{{ ansible_facts['fqdn'] }}"
 
 zabbix_proxy_database_hostname: localhost
 zabbix_proxy_database_name: zabbix_proxy
