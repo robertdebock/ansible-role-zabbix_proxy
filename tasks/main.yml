@@ -12,10 +12,20 @@
     name: "{{ zabbix_proxy_package }}"
     state: present
 
+- name: Create the log directory
+  ansible.builtin.file:
+    path: /var/log/zabbix
+    state: directory
+    owner: zabbix
+    group: zabbix
+    mode: "0750"
+
 - name: Configure zabbix_proxy
   ansible.builtin.template:
     src: zabbix_proxy.conf.j2
     dest: /etc/zabbix/zabbix_proxy.conf
+    owner: root
+    group: zabbix
     mode: "0640"
   notify:
     - Restart zabbix-proxy
